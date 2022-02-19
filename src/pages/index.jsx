@@ -1,5 +1,11 @@
+import { Button } from '@chakra-ui/react';
+
 function HomePage() {
-    return <div>Welcome to Next.js!</div>;
+    return (
+        <div>
+            <Button colorScheme="blue">Button</Button>
+        </div>
+    );
 }
 
 export default HomePage;

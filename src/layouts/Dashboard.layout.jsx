@@ -1,6 +1,6 @@
 import { Box, Image } from '@chakra-ui/react';
 
-import { NavBar, SideBar } from '../components';
+import { Content, NavBar, SideBar } from '../components';
 
 const DashboardLayout = () => {
     return (
@@ -19,6 +19,9 @@ const DashboardLayout = () => {
             </Box>
             <SideBar />
             <NavBar />
+            <Content>
+                <p>Dashbaord Content</p>
+            </Content>
         </div>
     );
 };

@@ -12,10 +12,16 @@ import {
 
 import { GoogleIcon } from '../../assets/icons';
 
-const SignInFormView = () => {
+const SignUp = props => {
+    const { toggleAuthView } = props;
+
     return (
         <Stack spacing="6">
             <Stack spacing="5">
+                <FormControl>
+                    <FormLabel htmlFor="fullName">Full Name</FormLabel>
+                    <Input id="fullName" type="text" />
+                </FormControl>
                 <FormControl>
                     <FormLabel htmlFor="email">Email</FormLabel>
                     <Input id="email" type="email" />
@@ -27,12 +33,17 @@ const SignInFormView = () => {
             </Stack>
             <HStack justify="space-between">
                 <Checkbox defaultIsChecked>Remember me</Checkbox>
-                <Button variant="link" colorScheme="blue" size="sm">
-                    Forgot password?
+                <Button
+                    variant="link"
+                    colorScheme="blue"
+                    size="sm"
+                    onClick={toggleAuthView}
+                >
+                    Back to Login
                 </Button>
             </HStack>
             <Stack spacing="6">
-                <Button colorScheme="blue">Sign In</Button>
+                <Button colorScheme="blue">Sign Up</Button>
                 <HStack>
                     <Divider />
                     <Text fontSize="sm" whiteSpace="nowrap" color="muted">
@@ -42,11 +53,11 @@ const SignInFormView = () => {
                 </HStack>
                 <Button isFullWidth>
                     <GoogleIcon boxSize="6" />
-                    <Text>Sign in with Google</Text>
+                    <Text>Sign up with Google</Text>
                 </Button>
             </Stack>
         </Stack>
     );
 };
 
-export default SignInFormView;
+export default SignUp;
